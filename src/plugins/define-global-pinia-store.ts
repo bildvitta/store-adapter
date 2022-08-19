@@ -21,7 +21,7 @@ export default {
       piniaStore[store.$id] = store
     }
 
-    const hasPiniaStore = !!Object.keys(app.config.globalProperties.$piniaStore).length
+    const hasPiniaStore = !!Object.keys(app.config.globalProperties.$piniaStore || {}).length
 
     if (hasPiniaStore) {
       Object.assign(app.config.globalProperties.$piniaStore, piniaStore)
