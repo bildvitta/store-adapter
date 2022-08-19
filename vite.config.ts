@@ -6,6 +6,7 @@ export default defineConfig({
   build: {
     target: 'ES6',
     lib: {
+      formats: ['es'],
       entry: 'src/index.ts',
       name: 'index',
       fileName: 'index'
