@@ -1,10 +1,10 @@
-import { GetStateParams, NamespacedState } from '../types'
+import { GetStateFromActionParams, NamespacedState } from '../types'
 
 /**
  * @example getState.call(this, { isPinia: true })
  * @example getState.call(this, { isPinia: false, resource: 'users' })
  */
-export default function (this: NamespacedState, params: GetStateParams) {
+export default function (this: NamespacedState, params: GetStateFromActionParams) {
   const { isPinia, resource } = params
 
   return isPinia ? this : this.state?.[resource]

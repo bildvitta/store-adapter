@@ -3,7 +3,7 @@ import { Dispatch, MapperForState } from 'vuex'
 
 export type GetActionPayloadArgs = [unknown, unknown]
 
-export interface GetStateParams {
+export interface GetStateFromActionParams {
   resource: string
   isPinia: boolean
 }
