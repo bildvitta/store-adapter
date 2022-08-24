@@ -1,10 +1,9 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
+    "target": "ES6",
     "useDefineForClassFields": true,
-    "declaration": true,
-    "module": "ESNext",
-    "lib": ["ESNext", "DOM"],
+    "module": "ES6",
+    "lib": ["ES6", "DOM"],
     "moduleResolution": "Node",
     "strict": true,
     "sourceMap": true,
@@ -15,9 +14,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
-    "skipLibCheck": true,
-    "declarationDir": "./src/types",
-    "types": ["vite/client"],
+    "skipLibCheck": true
   },
   "include": ["src"]
 }

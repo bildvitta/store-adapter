@@ -4,7 +4,6 @@ import dts from 'vite-plugin-dts'
 
 export default defineConfig({
   build: {
-    target: 'ES6',
     lib: {
       formats: ['es'],
       entry: 'src/index.ts',
@@ -13,7 +12,5 @@ export default defineConfig({
     },
     sourcemap: true
   },
-  plugins: [dts({
-    rollupTypes: true
-  })]
+  plugins: [dts()]
 })
