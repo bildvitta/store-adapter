@@ -10,6 +10,10 @@ Neste arquivo (CHANGELOG.MD) você encontrará somente as mudanças referentes a
 ### Sobre os "BREAKING CHANGES"
 Podemos ter pequenas breaking changes sem alterar o `major` version, apesar de serem pequenas, podem alterar o comportamento da funcionalidade caso não seja feita uma atualização, **preste muita atenção** nas breaking changes dentro das versões quando existirem.
 
-## 1.0.0-beta.20 - 22-08-22
+## 1.0.0-beta.21 - 26-08-22
+## BREAKING CHANGES
+- Alterado plugin `DefineGlobalPiniaStore`, agora recebe objeto das stores sem executar.
+
+## 1.0.0-beta.20 - 26-08-22
 ### Adicionado
 - Adicionado novo plugin `InitializeGlobalStores`.

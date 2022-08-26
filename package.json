@@ -1,6 +1,6 @@
 {
   "name": "@bildvitta/store-adapter",
-  "version": "1.0.0-beta.20",
+  "version": "1.0.0-beta.21",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "type": "module",
@@ -10,7 +10,8 @@
     "preview": "vite preview"
   },
   "files": [
-    "dist"
+    "dist",
+    "src"
   ],
   "publishConfig": {
     "access": "public",

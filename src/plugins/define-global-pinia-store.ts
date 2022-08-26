@@ -1,10 +1,10 @@
 import { App } from 'vue'
-import { StoreDefinition, StateTree } from 'pinia'
+import { DefineGlobalPiniaStoreOptions, PiniaStore } from '../types'
 
 /**
  * Adiciona uma variável global "$piniaStore" para ter acesso as stores sem ter que importar elas.
  *
- * @example app.use(DefineGlobalPiniaStore, { stores: [myUsersStore()] })
+ * @example app.use(DefineGlobalPiniaStore, { stores: { myUsersStore } })
  *
  * Desta forma em nossa aplicação Vue, considerate que o "id" de "myUserStore" seja "users" 
  * poderíamos acessar a store "myUserStore" da seguinte maneira:
@@ -12,13 +12,13 @@ import { StoreDefinition, StateTree } from 'pinia'
  * @example this.$piniaStore.users.list // retorna o state list de users
 */
 export default {
-  install <S extends StateTree, G, A> (
-    app: App, options: Record<'stores', StoreDefinition<string, S, G, A>[]>
+  install (
+    app: App, options: DefineGlobalPiniaStoreOptions
   ): void {
-    const piniaStore: Record<string, StoreDefinition<string, S, G, A>> = {}
+    const piniaStore: PiniaStore = {}
 
-    for (const store of options.stores) {
-      piniaStore[store.$id] = store
+    for (const key in options.stores) {
+      piniaStore[key] = options.stores[key]?.()
     }
 
     const hasPiniaStore = !!Object.keys(app.config.globalProperties.$piniaStore || {}).length
