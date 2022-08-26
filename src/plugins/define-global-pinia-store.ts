@@ -4,7 +4,7 @@ import { StoreDefinition, StateTree } from 'pinia'
 /**
  * Adiciona uma variável global "$piniaStore" para ter acesso as stores sem ter que importar elas.
  *
- * @example app.use(defineGlobalPiniaStore, { stores: [myUsersStore()] })
+ * @example app.use(DefineGlobalPiniaStore, { stores: [myUsersStore()] })
  *
  * Desta forma em nossa aplicação Vue, considerate que o "id" de "myUserStore" seja "users" 
  * poderíamos acessar a store "myUserStore" da seguinte maneira:
