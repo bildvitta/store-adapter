@@ -6,7 +6,7 @@ import { DefineGlobalPiniaStoreOptions, PiniaStore } from '../types'
  *
  * @example app.use(DefineGlobalPiniaStore, { stores: { myUsersStore } })
  *
- * Desta forma em nossa aplicação Vue, considerate que o "id" de "myUserStore" seja "users" 
+ * Desta forma em nossa aplicação Vue, considerando que o "id" de "myUserStore" seja "users" 
  * poderíamos acessar a store "myUserStore" da seguinte maneira:
  *
  * @example this.$piniaStore.users.list // retorna o state list de users
